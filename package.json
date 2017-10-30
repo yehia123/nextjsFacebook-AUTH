@@ -1,0 +1,19 @@
+{
+  "name": "nextjs-carpool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "next",
+    "build": "next build",
+    "start:prod": "next start"
+  },
+  "keywords": [],
+  "author": "Thomas Greco",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^4.1.3",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
