@@ -1,7 +1,20 @@
-import React from 'react';
+import withPage from '../HOCs/page';
+import AppBar from 'material-ui/AppBar';
+import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 
-const IndexPage = ({title = 'Next.js Carpool App'}) => (
-  <h2>{title}</h2>
-);
+const Home = (props) => {
+  return (
+    <Card>
+    <CardHeader title={props.board.title} />
+    <CardText>
+      {
+        props.board.items.map((x,i) => {
+          return (<p key={i}>{x.name}</p>)
+        })
+      }
+    </CardText>
+    </Card>
+  )
+}
 
-export default IndexPage;
+export default withPage(Home);
