@@ -11,26 +11,17 @@ const initialState = {
     color: '#56b771',
     theme: 'one'
   },
-  items: [{ id: 1233421, name: 'Walk the dog.'}, { id: 992938 , name: 'Pet the bunny.'}]
+  items: [{ id: 1233421, name: 'Walk the dog.'}, { id: 992938, name: 'Pet the bunny.'}]
 };
 
 export const onChangeAction = e => ({
   type: ON_CHANGE,
   payload: e.target.value
-})
+});
 
 export const addItemAction = () => ({
   type: 'ADD_ITEM'
 });
-
-/**
-const addItemReducer = (state = [], action = {}) => {
-    const { payload, type} = action;
-    switch (type) {
-        case: return {}
-    default: return state; 
-}
-*/
 
 const boardsSlice = (state = initialState, action = {}) => {
   const { payload, type} = action;
@@ -46,8 +37,8 @@ const boardsSlice = (state = initialState, action = {}) => {
       };
     case ON_CHANGE:
       return { ...state,
-      inputVal: payload 
-    }
+        inputVal: payload
+      };
     default: return state;
   }
 };

@@ -6,13 +6,13 @@ import ViewItems from '../features/ViewItems';
 
 
 const Home = (props) => (
-    <Card>
-      <CardHeader title={props.board.title} />
-      <CardText>
-        <ViewItems />
-        <AddPost />
-      </CardText>
-    </Card>
+  <Card>
+    <CardHeader title={props.board.title} />
+    <CardText>
+      <ViewItems />
+      <AddPost />
+    </CardText>
+  </Card>
 );
 
 
